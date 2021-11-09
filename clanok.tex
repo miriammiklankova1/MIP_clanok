@@ -1,0 +1,80 @@
+% Metódy inžinierskej práce
+
+\documentclass[10pt,twoside,english,a4paper]{article}
+
+\usepackage[english]{babel}
+
+\usepackage[IL2]{fontenc} 
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{url} 
+\usepackage{hyperref} 
+
+\usepackage{cite}
+
+\pagestyle{headings}
+
+\title{Lighting modeling in computer games
+\thanks{Semestrálny projekt v predmete Metódy inžinierskej práce, ak. rok 2021/22, vedenie: Vladimír Mlynarovič}} 
+
+\author{Miriam Miklánková\\[2pt]
+	{\small Slovenská technická univerzita v Bratislave}\\
+	{\small Fakulta informatiky a informačných technológií}\\
+	{\small \texttt{xmiklankova@stuba.sk}}
+	}
+
+\date{\small 6. november 2021} 
+
+
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+The software architecture of games is a part of software engineering that focuses on the relations and interaction of game elements. Effective organization of software architecture is the foundation for computer game designs. In the game environment, illumination is used for drawing attention to a certain object. It ensures good visibility of the action, and can also influence the player's decision. This article aims to inform about the modeling of software used for lighting in computer games. Moreover, the article demonstrates the necessary aspects of creating software for lighting. Lastly, it compares the pros and cons of conventional baked lighting and the latest trend - RTX ray tracing.
+\end{abstract}
+
+
+\section{Introduction}
+The first video games developed in the early 1970s did not pay much attention to lighting. However, as the games evolved, so did the software that provided lighting for them. Nowadays, the design of lighting in computer video games plays an important role in game development. The way that lighting can change the whole mood and quality of a game will be acknowledged in chapter ~\ref{second}. When creating lighting for a computer game, you need to realize what types of lighting there are. How and when to use them will be discussed further in chapter ~\ref{third}. The modeling of software that deals with lighting in computer games will be discussed in chapter ~\ref{fourth}.  Developments in ray tracing, which involve the realistic modeling of light in simulations by casting rays into the scene to calculate physically-correct lighting, give a glimpse into what the future of video games could look like \cite{Foundry-Article} in chapter ~\ref{fifth}. In chapter ~\ref{sixth}, there will be a comparison of the current trends and the former types of lighting. 
+
+
+\section{Significance of lighting in games} \label{second}
+
+Many game developers try to make players experience similar or even more breathtaking scenery, as they would in real life. However, for a game to be immersive, the game world must feel believable to the players. Game worlds need to create their form of reality, but that does not mean they have to look exactly like our world. \cite{Oudshoorn:Ray-Tracing} In real life, the lighting can change the whole mood of a place or a situation. Places that are sunlit and cozy during the day are sometimes frightening during a gloomy night. In computer games, it is quite similar. The shadows, intensity of brightness, and color of light create an aesthetic for each scene. When done right, it evokes strong emotions in players. Since games are interactive, the character's actions change the lighting and that makes a game even more realistic for the players. It feels authentic when you can see your shadow move according to your position in the environment. \cite{Pluralsight} Lighting often directs the attention of a player to an item or a path by focusing rays of light onto it. In first-person shooter games, light establishes good action visibility, and dark shadows create a hiding spot. Moreover, the color of sunlight sets the atmosphere and provides depth to a game. \cite{El-Nasr}
+
+
+\section{Common types of lighting} \label{third}
+...
+\subsection{Calculation methods} \label{calculation}
+Lighting can be calculated in a few ways, however, I will mention the two most frequent ones. The first one is a simple model by Johann Lambert - Lambert lighting. Objects that are illuminated in this way look the same from different viewing angles. The Lambert model is used for objects with diffuse lighting, meaning that they are not shiny and do not have any reflection. To calculate the lighting in this model, you need the position of the point on the object relative to the light source. You also need the normal vector of the object, where you are performing the calculation, which tells you the direction the surface is facing. Simply put, surfaces directly facing the light are fully lit and the amount of lighting falls off linearly as the normal turns perpendicular to the light.
+
+The second lighting model by Bui Tuong Phong is called Phong illumination. Opposite to the Lambert lighting, Phong lighting is used for surfaces and objects that have bright spots of light, which are the direct reflection of the light. The reflections can be dull or sharp depending on the material. For instance, the reflection on a glass window is much brighter than the reflection on the non-polished metal. The Phong model of lighting has two parts, the diffuse light as in Lambert surfaces and the reflection of light. \cite{Prall}
+
+
+\section{Software for lighting in games} \label{fourth}
+Calculating and creating lighting for a game is extremely complex, and it would not be possible without software. Simulated illumination is embedded in the 3D modeling software used for game production. Each software product contains algorithms that establish simulated illumination. Every algorithm works on its own principles of how lighting is established or simulated, including shadow appearance and color. \cite{Dynamic-Lighting} They offer a range of light sources and visualize it for various environments and situations. The software also plays a role in rendering the image to make it clear. Light-mapping is also built-in for many 3D modeling software. It calculates the brightness of surfaces in a game. Light-maps are then overlaid on top of scene geometry to create the effect of lighting. This process is supported by graphics acceleration hardware that makes light-maps quite useful in in 3D real-time applications.\cite{Fast-Lighting} \cite{Unity}
+
+
+\subsection{Examples of software} \label{examples}
+
+\begin{itemize}
+\item Maya
+\item 3D Studio Max
+\item Blender
+\item OpenGL
+
+\end{itemize}
+
+
+\section{Comparison} \label{fifth}
+
+
+\section{Conclusion} \label{sixth} 
+
+
+
+\bibliography{literatura}
+\bibliographystyle{plain} 
+\end{document}
