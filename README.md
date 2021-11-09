@@ -1,2 +1,2 @@
 # MIP_clanok
-súbory v master branch
+súbory sú v master branch
